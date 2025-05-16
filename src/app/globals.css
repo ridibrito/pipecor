@@ -1,26 +1,21 @@
-@import "tailwindcss";
+@import "tailwindcss"; /* Isso não é padrão para Next.js com Tailwind. Normalmente Tailwind é importado via PostCSS. */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ffffff; /* Branco para modo claro */
+  --foreground: #171717; /* Preto/Cinza Escuro para texto em modo claro */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* @theme inline { ... } Isso parece ser de alguma biblioteca ou framework específico, como Vercel Design System ou algo similar. Não é CSS padrão ou Tailwind. */
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a0a0a; /* Preto para modo escuro */
+    --foreground: #ededed; /* Branco/Cinza Claro para texto em modo escuro */
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, Montserrat, sans-serif; /* Fonte padrão definida aqui */
 }
