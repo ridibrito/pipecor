@@ -15,8 +15,11 @@ export function createSupabaseServerClient() {
         set(name: string, value: string, options: CookieOptions) {
           cookieStore.set({ name, value, ...options });
         },
-        remove(name: string, options: CookieOptions) {
-          cookieStore.set({ name, value: '', ...options });
+        remove(name: string, options?: CookieOptions) {
+          // Next.js provides a delete method that accepts the cookie name
+          // and optional options such as path. Using it ensures the cookie
+          // is properly removed instead of setting an empty value.
+          cookieStore.delete(name, options);
         },
       },
     }
