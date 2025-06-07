@@ -1,5 +1,5 @@
 {
-  "name": "pipecor",
+  "name": "next-app-base",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,13 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@clerk/localizations": "^3.16.0",
-    "@headlessui/react": "^2.2.3",
     "@supabase/ssr": "^0.6.1",
-    "@supabase/supabase-js": "^2.49.4",
-    "geist": "^1.4.2",
-    "lucide-react": "^0.511.0",
-    "next": "15.3.2",
+    "@supabase/supabase-js": "^2.50.0",
+    "lucide-react": "^0.513.0",
+    "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -26,7 +23,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.3.2",
+    "eslint-config-next": "15.3.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
