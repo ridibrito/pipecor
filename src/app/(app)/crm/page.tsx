@@ -1,8 +1,13 @@
-export default function CrmPage() {
+import { createClient } from '@/lib/supabase/server';
+import { ContactList } from './components/contact-list';
+export const revalidate = 0;
+export default async function CrmPage() {
+  const supabase = createClient();
+  const { data: contacts } = await supabase.from('contacts').select('id, full_name, email, phone');
   return (
     <div>
-      <h1 className="text-2xl font-bold">Módulo de CRM</h1>
-      <p>Página em construção.</p>
+      <div className="mb-8"><h1 className="text-2xl font-bold">Contatos</h1><p className="text-zinc-500">Gerencie seus leads e clientes.</p></div>
+      <ContactList initialContacts={contacts ?? []} />
     </div>
   );
 }
