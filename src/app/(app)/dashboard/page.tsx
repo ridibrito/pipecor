@@ -30,14 +30,7 @@ export default async function DashboardPage() {
             Aqui está um resumo da sua atividade.
           </p>
         </div>
-        <form action={logout}>
-          <button
-            type="submit"
-            className="px-4 py-2 text-sm font-medium text-zinc-700 bg-white border border-zinc-200 rounded-md shadow-sm hover:bg-zinc-50 dark:bg-zinc-800 dark:text-zinc-300 dark:border-zinc-700 dark:hover:bg-zinc-700"
-          >
-            Sair
-          </button>
-        </form>
+      
       </div>
 
       {/* Área para os futuros cards e KPIs do dashboard */}
